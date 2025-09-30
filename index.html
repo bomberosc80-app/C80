@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario Brigada de Rescate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginContainer" class="card">
+    <h2>Brigada de Rescate - Login</h2>
+    <input type="text" id="username" placeholder="Usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button id="loginBtn">Ingresar</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <div id="appContainer" class="hidden">
+    <header>
+      <h1>Inventario de Rescate con Cuerdas</h1>
+      <button id="logoutBtn" class="logout">Cerrar sesión</button>
+    </header>
+
+    <div id="adminPanel" class="hidden card">
+      <h2>Panel del Administrador</h2>
+      <input type="file" id="csvFileInput" accept=".csv" />
+      <button id="uploadBtn">Previsualizar CSV</button>
+      <div id="previewContainer"></div>
+    </div>
+
+    <section id="inventarioSection" class="card">
+      <h2>Inventario</h2>
+      <table id="inventarioTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Elemento</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Última Inspección</th>
+          </tr>
+        </thead>
+        <tbody id="inventarioBody">
+          <!-- Datos cargados desde CSV -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
