@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Contenedor principal */
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* Card principal */
+.card {
+  background: #111;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  border: 1px solid #2a2a2a;
+  text-align: center;
+}
+
+/* Títulos */
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #ff3b3b;
+}
+
+h2 {
+  margin-top: 8px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Botones */
+.menu-btn {
+  background: linear-gradient(135deg, #ff1f1f, #b30000);
+  border: none;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.menu-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.45);
+}
+
+.menu-btn:active {
+  transform: scale(0.98);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* Animación */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
